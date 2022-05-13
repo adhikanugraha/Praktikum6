@@ -5,7 +5,17 @@ using namespace std;
 class Praktikum6 {
   public:
   // input
-
+	void input(){
+	    cout<<"Masukkan nama dosen = ";
+	    cin >> dosen;
+	    cout << "masukkan matakuliah = ";
+	    cin >> matkul;
+	    cout << "masukkan banyak nilai yang di masukkan = "; cin>>banyak_nilai;
+	    for(int i=0;i<banyak_nilai;i++){
+	      cout<<"Masukkan nilai ke-"<<i+1<<" = "; cin>>nilai[i];
+	      
+	  	}
+	}
 
   // proses
   int minimal(){
@@ -40,19 +50,27 @@ class Praktikum6 {
 void output(){
 system("cls");
  // nama dosen
-   cout << " Nama dosen: " << dosen<<endl;
+   cout<<"+-----------------------------------------------+\n";
+   cout<<"|		DAFTAR NILAI 	 		|\n";
+   cout<<"+-----------------------------------------------+\n";
+   cout << "| Nama dosen: " << dosen<<"\t\t\t\t|"<<endl;
  // nama mata kuliah
-   cout << " Nama Mata Kuliah: "<< matkul<<endl;
+   cout<<"+-----------------------------------------------+\n";
+   cout << "| Nama Mata Kuliah: "<< matkul<<"\t\t\t\t|"<<endl;
  // daftar nilai
    for(int i=0;i<banyak_nilai;i++){
-     cout<<" Nilai ke-"<<i+1<<" = "<<nilai[i]<<endl;
+      cout<<"| Nilai ke-"<<i+1<<" = "<<nilai[i]<<"\t\t\t\t|"<<endl;
    }
+   cout<<"+-----------------------------------------------+\n";
  // nilai min
-   cout << " Nilai Minimal: " << min <<endl;
+   cout << "| Nilai Minimal: " << min <<"\t\t\t\t|"<<endl;
+   cout<<"+-----------------------------------------------+\n";
  // nilai max
-   cout << " Nilai Maksimal: " << max << endl;
+   cout << "| Nilai Maksimal: " << max <<"\t\t\t\t|"<< endl;
+   cout<<"+-----------------------------------------------+\n";
  // nilai rata rata
-   cout << " Nilai Rata-rata: " << rata<<endl;
+   cout << "| Nilai Rata-rata: " << rata<<"\t\t\t\t|"<<endl;
+   cout<<"+-----------------------------------------------+\n";
  }
 
 
@@ -67,6 +85,7 @@ system("cls");
 
 int main(){
   Praktikum6 x;
+  x.input();
   x.minimal();
   x.maximal();
   x.rata2();
