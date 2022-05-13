@@ -37,6 +37,23 @@ class Praktikum6 {
 			return rata;
 		}
   // output
+void output(){
+system("cls");
+ // nama dosen
+   cout << " Nama dosen: " << dosen<<endl;
+ // nama mata kuliah
+   cout << " Nama Mata Kuliah: "<< matkul<<endl;
+ // daftar nilai
+   for(int i=0;i<banyak_nilai;i++){
+     cout<<" Nilai ke-"<<i+1<<" = "<<nilai[i]<<endl;
+   }
+ // nilai min
+   cout << " Nilai Minimal: " << min <<endl;
+ // nilai max
+   cout << " Nilai Maksimal: " << max << endl;
+ // nilai rata rata
+   cout << " Nilai Rata-rata: " << rata<<endl;
+ }
 
 
   private:
@@ -53,5 +70,6 @@ int main(){
   x.minimal();
   x.maximal();
   x.rata2();
+  x.output();
   
 }
